@@ -45,5 +45,15 @@ def add():
 
     return render_template("add.html")
 
+@app.route('/delete', methods=["POST"])
+def delete():
+    index = int(request.form.get('index'))
+
+    if "exercises" in session and 0 <= index < len(session["exercises"]):
+        session["exercises"].pop(index)
+        session["exercises"] = session["exercises"]
+
+    return redirect(url_for("view"))
+
 if __name__ == '__main__':
     app.run(debug=True)

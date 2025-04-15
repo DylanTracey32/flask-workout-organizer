@@ -10,6 +10,10 @@
                 <div class="col-md-6 mb-4">
                     <div class="card">
                         <div class="card-body">
+                            <form action="{{ url_for("delete") }}" method="POST">
+                                <input type="hidden" name="index" value="{{ loop.index0 }}">
+                                <button type="submit" class="btn btn-danger mt-3">Delete</button>
+                            </form>
                             <h4 class="card-title">{{ exercise.name }}</h4>
                             {% if exercise.image %}
                             <img src="{{ url_for("static", filename="uploads/" ~ exercise.image) }}" alt="Exercise Image" class="img-fluid mb-3">
