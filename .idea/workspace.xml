@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7579908a-1894-487a-95a7-1d359d4be5af" name="Changes" comment="Added POST form submission and redirects the user to view.html after submitting.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="7579908a-1894-487a-95a7-1d359d4be5af" name="Changes" comment="After submitting the form in add.html, it now displays content for only one card (only the first one uploaded) in view.html.">
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/view.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/view.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,7 +132,7 @@
       <option name="presentableId" value="Default" />
       <updated>1744736114424</updated>
       <workItem from="1744736115311" duration="116000" />
-      <workItem from="1744736269256" duration="14824000" />
+      <workItem from="1744736269256" duration="15262000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit. Working route to index.html and Bootstrap nav bar.">
       <option name="closed" value="true" />
@@ -168,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744752159460</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="After submitting the form in add.html, it now displays content for only one card (only the first one uploaded) in view.html.">
+      <option name="closed" value="true" />
+      <created>1744754503742</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1744754503742</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,9 +196,10 @@
     <MESSAGE value="Added view.html to eventually view our cards there and a route on app.py to the page." />
     <MESSAGE value="Added add.html to define what we want users to keep track of regarding their exercise." />
     <MESSAGE value="Added POST form submission and redirects the user to view.html after submitting." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added POST form submission and redirects the user to view.html after submitting." />
+    <MESSAGE value="After submitting the form in add.html, it now displays content for only one card (only the first one uploaded) in view.html." />
+    <option name="LAST_COMMIT_MESSAGE" value="After submitting the form in add.html, it now displays content for only one card (only the first one uploaded) in view.html." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/FlaskProject$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1744753659731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FlaskProject$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1744754383192" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

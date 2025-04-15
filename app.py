@@ -26,11 +26,11 @@ def add():
             "equipment": equipment,
             "instructions": instructions,
             "image": image
-
         }
 
         session.setdefault("exercises", [])
         session["exercises"].append(exercise)
+        session["exercises"] = session["exercises"]
 
         return redirect(url_for("view"))
 
