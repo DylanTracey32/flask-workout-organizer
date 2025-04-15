@@ -11,6 +11,9 @@
                     <div class="card">
                         <div class="card-body">
                             <h4 class="card-title">{{ exercise.name }}</h4>
+                            {% if exercise.image %}
+                            <img src="{{ url_for("static", filename="uploads/" ~ exercise.image) }}" alt="Exercise Image" class="img-fluid mb-3">
+                            {% endif %}
                             <p class="card-text"><strong>Muscle Group:</strong> {{ exercise.muscle }}</p>
                             <p class="card-text"><strong>Equipment:</strong> {{ exercise.equipment }}</p>
                             <p class="card-text"><strong>Instructions:</strong> {{ exercise.instructions }}</p>

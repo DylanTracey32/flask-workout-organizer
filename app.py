@@ -1,4 +1,6 @@
 from flask import Flask, render_template, session, request, url_for, redirect
+from werkzeug.utils import secure_filename
+import os
 
 app = Flask(__name__)
 app.secret_key = "terminator-two"
@@ -18,14 +20,21 @@ def add():
         muscle = request.form.get("muscle")
         equipment = request.form.get("equipment")
         instructions = request.form.get("instructions")
-        image = request.form.get("image")
+        image = request.files.get("image")
+        image_filename = None
+
+        if image and image.filename != "":
+            filename = secure_filename(image.filename)
+            image_path = os.path.join("static", "uploads", filename)
+            image.save(image_path)
+            image_filename = filename
 
         exercise = {
             "name": name,
             "muscle": muscle,
             "equipment": equipment,
             "instructions": instructions,
-            "image": image
+            "image": image_filename
         }
 
         session.setdefault("exercises", [])
