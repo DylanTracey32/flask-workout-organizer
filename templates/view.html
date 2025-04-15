@@ -3,10 +3,23 @@
 {% block title %}Your Exercises{% endblock %}
 
 {% block content %}
-    <h2>Your uploaded Exercises</h2>
-    <p>This is where your exercises will appear after adding them.</p>
-    <ul>
-        <li>Push-ups - 3 sets of 12</li>
-        <li>Deadlifts - 4 sets of 6</li>
-    </ul>
+    <h2>Your Exercises</h2>
+    {% if session.exercises %}
+        <div class="row">
+            {% for exercise in session.exercises %}
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title">{{ exercise.name }}</h4>
+                            <p class="card-text"><strong>Muscle Group:</strong> {{ exercise.muscle }}</p>
+                            <p class="card-text"><strong>Equipment:</strong> {{ exercise.equipment }}</p>
+                            <p class="card-text"><strong>Instructions:</strong> {{ exercise.instructions }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <p>No exercises added yet. Go to the add page!</p>
+    {% endif %}
 {% endblock %}
