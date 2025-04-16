@@ -1,4 +1,4 @@
-{%  extends "base.html" %}
+{% extends "base.html" %}
 
 {% block title %}Your Exercises{% endblock %}
 
@@ -7,13 +7,9 @@
     {% if session.exercises %}
         <div class="row">
             {% for exercise in session.exercises %}
-                <div class="col-md-6 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <form action="{{ url_for("delete") }}" method="POST">
-                                <input type="hidden" name="index" value="{{ loop.index0 }}">
-                                <button type="submit" class="btn btn-danger mt-3">Delete</button>
-                            </form>
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card h-100 shadow">
+                        <div class="card-body d-flex flex-column justify-content-between">
                             <h4 class="card-title">{{ exercise.name }}</h4>
                             {% if exercise.image %}
                             <img src="{{ url_for("static", filename="uploads/" ~ exercise.image) }}" alt="Exercise Image" class="img-fluid mb-3">
@@ -21,6 +17,10 @@
                             <p class="card-text"><strong>Muscle Group:</strong> {{ exercise.muscle }}</p>
                             <p class="card-text"><strong>Equipment:</strong> {{ exercise.equipment }}</p>
                             <p class="card-text"><strong>Instructions:</strong> {{ exercise.instructions }}</p>
+                            <form action="{{ url_for("delete") }}" method="POST">
+                                <input type="hidden" name="index" value="{{ loop.index0 }}">
+                                <button type="submit" class="btn btn-danger mt-3">Delete</button>
+                            </form>
                         </div>
                     </div>
                 </div>
