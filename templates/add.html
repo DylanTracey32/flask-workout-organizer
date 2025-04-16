@@ -3,28 +3,32 @@
 {% block content %}
 <h2>Add a new Exercise</h2>
 
-<form action="{{ url_for("add") }}" method="POST" enctype="multipart/form-data">
-    <div class="mb-3">
-        <label for="name" class="form-label">Exercise Name</label>
-        <input type="text" class="form-control" id="name" name="name" required>
-    </div>
-    <div class="mb-3">
-        <label for="muscle" class="form-label">Muscle Group</label>
-        <input type="text" class="form-control" id="muscle" name="muscle" required>
-    </div>
-    <div class="mb-3">
-        <label for="equipment" class="form-label">Equipment</label>
-        <input type="text" class="form-control" id="equipment" name="equipment" required>
-    </div>
-    <div class="mb-3">
-        <label for="instructions" class="form-label">Instructions</label>
-        <textarea class="form-control" id="instructions" name="instructions" rows="3" required></textarea>
-    </div>
-    <div class="mb-3">
-        <label for="image" class="form-label">Image</label>
-        <input type="file" class="form-control" id="image" name="image" accept="image/*">
-    </div>
-    <button type="submit" class="btn btn-primary">Add Exercise</button>
-</form>
+
+
+<div class="card p-4 shadow">
+    <form action="{{ url_for("add") }}" method="POST" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label for="name" class="form-label">Exercise Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="muscle" class="form-label">Muscle Group</label>
+            <input type="text" class="form-control" id="muscle" name="muscle" required>
+        </div>
+        <div class="mb-3">
+            <label for="equipment" class="form-label">Equipment</label>
+            <input type="text" class="form-control" id="equipment" name="equipment" required>
+        </div>
+        <div class="mb-3">
+            <label for="instructions" class="form-label">Instructions</label>
+            <textarea class="form-control" id="instructions" name="instructions" rows="3" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Image</label>
+            <input type="file" class="form-control" id="image" name="image" accept="image/*">
+        </div>
+        <button type="submit" class="btn btn-success w-100 mt-3">Add Exercise</button>
+    </form>
+</div>
 <script src="{{ url_for("static", filename="js/validate.js") }}"></script>
 {% endblock %}

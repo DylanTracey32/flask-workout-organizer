@@ -3,6 +3,32 @@
 {% block title %}Home - Workout Tracker{% endblock %}
 
 {% block content %}
-    <h1>Welcome to Your Workout Exercise Organizer</h1>
-    <p>This is your personal space to add and view your own workouts.</p>
+    <div class="text-center py-5">
+        <h1>Welcome to Your Workout Exercise Organizer</h1>
+        <p>This is your personal space to add and view your own workouts.</p>
+        <a class="btn btn-primary mt-4 wt-50" href={{ url_for("add") }}>Get started</a>
+    </div>
+    <div class="container">
+        <h3 class="text-center mb-4">What Users Are Saying</h3>
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="card shadow-sm p-3 mb-4 bg-light">
+                    <div class="card-body">
+                        <p class="card-text">"I’ve tried a dozen fitness apps, but this is the first one that kept me consistent. Clean, simple, and motivating!"</p>
+                        <p class="fw-bold mb-o"> - Eric S, Biking Enthusiast</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-5">
+                <div class="card shadow-sm p-3 mb-4 bg-light">
+                    <div class="card-body">
+                        <p class="card-text">"As a student with a tight schedule, this app helps me stay on track without any clutter. Love the image upload feature!"</p>
+                        <p class="fw-bold mb-o"> - Dylan T, Novice Developer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
